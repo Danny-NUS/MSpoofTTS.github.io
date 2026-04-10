@@ -139,380 +139,241 @@
 
 
                 <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-                    <h3>Zero-shot Text-to-Speech:</h3>
-                    The first 3 seconds of the Voice Prompt are used as prompt.
+                    <h3>Generated Speech Samples on LibriTTS</h3>
                     <div class="table-responsive pt-3">
                         <table class="table table-hover pt-2">
                             <thead>
                                 <tr>
                                     <th style="text-align: center">Text</th>
-                                    <th style="text-align: center">Voice Prompt</th>
-                                    <th style="text-align: center">SpeechAlign-sft</th>
-                                    <th style="text-align: center">SpeechAlign-RLHF-PPO</th>
-                                    <th style="text-align: center">SpeechAlign-DPO-Iter3</th>
-                                    <th style="text-align: center">Groundtruth</th>
+                                    <th style="text-align: center">EAS</th>
+                                    <th style="text-align: center">RAS</th>
+                                    <th style="text-align: center">HierEAS</th>
+                                    <th style="text-align: center">HierRAS</th>
 
 
                                 </tr>
                             </thead>
                             <tbody>
-                                <td style="text-align: center;vertical-align:middle;width: 800px">Marie's face fell
-                                    under his brooding gaze.</td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/1/prompt.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/1/sft.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/1/ppo.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/1/dpo3.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/1/groundtruth.wav" autoplay />Your browser does not support
-                                        the audio element.
-                                    </audio></td>
+                                <tr>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px">It is said that
+                                        his right arm had grown powerless from having been raised so often over the
+                                        heads of those whom he baptized. He wished then to go to China to win still more
+                                        souls for God but he died of fever on the island of Sancian.</td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source src="MSpoof_sample/Libritts/1089_134686_000032_000007/eas.wav"
+                                                autoplay />Your browser does not support
+                                            the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source
+                                                src="MSpoof_sample/Libritts/1089_134686_000032_000007/ras_k50_win25.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source
+                                                src="MSpoof_sample/Libritts/1089_134686_000032_000007/rank_eas_hier.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source
+                                                src="MSpoof_sample/Libritts/1089_134686_000032_000007/rank_ras_hier.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
                                 </tr>
 
-                                <td style="text-align: center;vertical-align:middle;width: 800px">Burn fire burn flicker
-                                    flicker flame.</td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/1.5/prompt.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/1.5/sft.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/1.5/ppo.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/1.5/dpo3.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/1.5/groundtruth.wav" autoplay />Your browser does not
-                                        support the audio element.
-                                    </audio></td>
+                                <tr>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px">Mr Soames was a
+                                        tall, spare man, of a nervous and excitable temperament.</td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source src="MSpoof_sample/Libritts/1580_141083_000002_000002/eas.wav"
+                                                autoplay />Your browser does not support
+                                            the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source
+                                                src="MSpoof_sample/Libritts/1580_141083_000002_000002/ras_k50_win25.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source
+                                                src="MSpoof_sample/Libritts/1580_141083_000002_000002/rank_eas_hier.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source
+                                                src="MSpoof_sample/Libritts/1580_141083_000002_000002/rank_ras_hier.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
                                 </tr>
 
-                                <td style="text-align: center;vertical-align:middle;width: 800px">Thou gentle maid of
-                                    silent valleys and of modest brooks for thou shall be clothed in light and fed with
-                                    morning manna till summers heat melts thee beside the fountains and the springs to
-                                    flourish in eternal vales they why should thel complain.</td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/2/prompt.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/2/sft.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/2/ppo.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/2/dpo3.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/2/groundtruth.wav" autoplay />Your browser does not support
-                                        the audio element.
-                                    </audio></td>
+                                <tr>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px">She had pictured
+                                        herself earning this by teaching one or two of her specialties in some private
+                                        school near New York or Boston, or even in a Western college.</td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source src="MSpoof_sample/Libritts/1995_1826_000005_000001/eas.wav"
+                                                autoplay />Your browser does not support
+                                            the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source
+                                                src="MSpoof_sample/Libritts/1995_1826_000005_000001/ras_k50_win25.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source
+                                                src="MSpoof_sample/Libritts/1995_1826_000005_000001/rank_eas_hier.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source
+                                                src="MSpoof_sample/Libritts/1995_1826_000005_000001/rank_ras_hier.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
                                 </tr>
 
-                                <td style="text-align: center;vertical-align:middle;width: 800px">He summoned half a
-                                    dozen citizens to join his posse who followed obeyed and assisted him.</td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/2.5/prompt.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/2.5/sft.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/2.5/ppo.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/2.5/dpo3.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/2.5/groundtruth.wav" autoplay />Your browser does not
-                                        support the audio element.
-                                    </audio></td>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+                    <h3>Generated Speech Samples on LibriSpeech</h3>
+                    <div class="table-responsive pt-3">
+                        <table class="table table-hover pt-2">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center">Text</th>
+                                    <th style="text-align: center">EAS</th>
+                                    <th style="text-align: center">RAS</th>
+                                    <th style="text-align: center">HierEAS</th>
+                                    <th style="text-align: center">HierRAS</th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px">He began a
+                                        confused complaint against the wizard, who had vanished behind the curtain on
+                                        the left.</td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source src="MSpoof_sample/Librispeech/61-70968-0000/eas.wav" autoplay />
+                                            Your browser does not support
+                                            the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source src="MSpoof_sample/Librispeech/61-70968-0000/ras_k50_win25.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source src="MSpoof_sample/Librispeech/61-70968-0000/rank_eas_hier.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source src="MSpoof_sample/Librispeech/61-70968-0000/rank_ras_hier.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
                                 </tr>
 
-                                <td style="text-align: center;vertical-align:middle;width: 800px">Soon the whole bridge
-                                    was trembling and resounding.</td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/3/prompt.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/3/sft.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/3/ppo.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/3/dpo3.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/3/groundtruth.wav" autoplay />Your browser does not support
-                                        the audio element.
-                                    </audio></td>
+                                <tr>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px">I remained there
+                                        alone for many hours, but I must acknowledge that before I left the chambers I
+                                        had gradually brought myself to look at the matter in another light.</td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source src="MSpoof_sample/Librispeech/8455-210777-0000/eas.wav" autoplay />
+                                            Your browser does not support
+                                            the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source src="MSpoof_sample/Librispeech/8455-210777-0000/ras_k50_win25.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source src="MSpoof_sample/Librispeech/8455-210777-0000/rank_eas_hier.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source src="MSpoof_sample/Librispeech/8455-210777-0000/rank_ras_hier.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
                                 </tr>
 
-                                <td style="text-align: center;vertical-align:middle;width: 800px">Well that may be true
-                                    agreed margolotte but on the contrary a servant with too much brains is sure to
-                                    become independent and high and mighty and feel above her work.</td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/4/prompt.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/4/sft.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/4/ppo.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/4/dpo3.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/4/groundtruth.wav" autoplay />Your browser does not support
-                                        the audio element.
-                                    </audio></td>
+                                <tr>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px">Then he rushed
+                                        down the stairs into the courtyard, shouting loudly for his soldiers and
+                                        threatening to punish everybody in his dominions if the sailorman was not
+                                        recaptured.</td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source src="MSpoof_sample/Librispeech/8555-284447-0000/eas.wav" autoplay />
+                                            Your browser does not support
+                                            the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source src="MSpoof_sample/Librispeech/8555-284447-0000/ras_k50_win25.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source src="MSpoof_sample/Librispeech/8555-284447-0000/rank_eas_hier.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
+                                    <td style="text-align: center;vertical-align:middle;width: 800px"><audio
+                                            controls="controls" style="width: 140px;">
+                                            <source src="MSpoof_sample/Librispeech/8555-284447-0000/rank_ras_hier.wav"
+                                                autoplay />Your browser does not support the
+                                            audio element.
+                                        </audio></td>
                                 </tr>
 
-                                <td style="text-align: center;vertical-align:middle;width: 800px">Distrusting his own
-                                    judgment his appeals to the opinion of chingachgook were frequent and earnest.</td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/5/prompt.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/5/sft.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/5/ppo.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/5/dpo3.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/5/groundtruth.wav" autoplay />Your browser does not support
-                                        the audio element.
-                                    </audio></td>
-                                </tr>
 
-                                <td style="text-align: center;vertical-align:middle;width: 800px">Everything he has done
-                                    has been aimed at the conservation of energy the contraction of space the
-                                    intensification of culture.</td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/6/prompt.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/6/sft.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/6/ppo.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/6/dpo3.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/6/groundtruth.wav" autoplay />Your browser does not support
-                                        the audio element.
-                                    </audio></td>
-                                </tr>
-
-                                <td style="text-align: center;vertical-align:middle;width: 800px">In the present day we
-                                    are well aware that an ancient philosopher is to be interpreted from himself and by
-                                    the contemporary history of thought.</td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/7/prompt.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/7/sft.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/7/ppo.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/7/dpo3.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/7/groundtruth.wav" autoplay />Your browser does not support
-                                        the audio element.
-                                    </audio></td>
-                                </tr>
-
-                                <td style="text-align: center;vertical-align:middle;width: 800px">My eyes fill with
-                                    tears when i contrast the bliss of such a state brightened by hopes of the future
-                                    with the melancholy state i now live in uncertain that i ever felt true contrition
-                                    wandering in thought and deed longing for holiness which i shall never never obtain
-                                    smitten at times to the heart with the conviction that ghastly calvinistic doctrines
-                                    are true darkened in short by the very shadows of spiritual death.</td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/8/prompt.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/8/sft.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/8/ppo.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/8/dpo3.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/8/groundtruth.wav" autoplay />Your browser does not support
-                                        the audio element.
-                                    </audio></td>
-                                </tr>
-
-                                <td style="text-align: center;vertical-align:middle;width: 800px">Their distinctive
-                                    characters however display one broad and unfailing difference.</td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/9/prompt.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/9/sft.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/9/ppo.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/9/dpo3.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/9/groundtruth.wav" autoplay />Your browser does not support
-                                        the audio element.
-                                    </audio></td>
-                                </tr>
-
-                                <td style="text-align: center;vertical-align:middle;width: 800px">Forthwith all ran to
-                                    the opening of the tent to see what might be amiss but master will who peeped out
-                                    first needed no more than one glance.</td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/10/prompt.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/10/sft.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/10/ppo.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/10/dpo3.wav" autoplay />Your browser does not support the
-                                        audio element.
-                                    </audio></td>
-                                <td style="text-align: center;vertical-align:middle;width: 800px"><audio
-                                        controls="controls" style="width: 140px;">
-                                        <source src="zs_tts/10/groundtruth.wav" autoplay />Your browser does not support
-                                        the audio element.
-                                    </audio></td>
-                                </tr>
 
                             </tbody>
                         </table>
