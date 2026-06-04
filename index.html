@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MSpoofTTS — Interspeech 2026</title>
+<link rel="icon" type="image/png" href="imgs/MSpoofTTS.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -64,7 +65,7 @@
 
   /* ── Hero ── */
   .hero {
-    max-width: 860px; margin: 0 auto; padding: 5rem 2rem 3.5rem;
+    max-width: 1100px; margin: 0 auto; padding: 5rem 3rem 3.5rem;
     text-align: center;
   }
   .hero-icon {
@@ -134,7 +135,7 @@
 
   /* ── Content sections ── */
   .section {
-    max-width: 900px; margin: 0 auto; padding: 2rem 2rem 4rem;
+    max-width: 1100px; margin: 0 auto; padding: 2rem 3rem 4rem;
   }
   .section-label {
     font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
@@ -147,14 +148,13 @@
     margin-bottom: 1.2rem; line-height: 1.25;
   }
   .divider {
-    max-width: 900px; margin: 0 auto;
+    max-width: 1100px; margin: 0 auto;
     border: none; border-top: 1px solid var(--border);
   }
 
   /* ── Abstract ── */
   .abstract-text {
     font-size: 15px; color: var(--fg2); line-height: 1.85;
-    max-width: 720px;
     text-align: justify;
   }
   .abstract-text strong { color: var(--fg); font-weight: 600; }
@@ -202,17 +202,19 @@
     border: 1px solid var(--border);
     border-radius: var(--radius);
     overflow: hidden;
-    margin: 1.5rem 0;
+    margin: 1.5rem auto;
+    max-width: 820px;
     box-shadow: var(--card-shadow);
     transition: box-shadow 0.2s;
   }
   .fig-wrap:hover { box-shadow: var(--card-shadow-hover); }
-  .fig-wrap img { width: 100%; display: block; }
+  .fig-wrap img { width: 100%; display: block; padding: 1rem 1.5rem 0; box-sizing: border-box; }
   .fig-caption {
-    padding: 0.9rem 1.2rem;
+    padding: 0.8rem 1.2rem 0.9rem;
     font-size: 13px; color: var(--fg2); line-height: 1.6;
     border-top: 1px solid var(--border);
     background: var(--bg);
+    margin-top: 0.8rem;
   }
   .fig-caption strong { color: var(--fg); }
 
@@ -267,80 +269,61 @@
   }
   .rtable-hidden { display: none; }
 
-  /* ── Audio samples ── */
-  .audio-section { margin-top: 1.5rem; }
-  .audio-subsection { margin-bottom: 2rem; }
+  /* ── Audio samples — table with gradient ours columns ── */
+  .audio-subsection { margin-bottom: 2.5rem; }
   .audio-subsection h3 {
     font-size: 15px; font-weight: 600; color: var(--fg);
     margin-bottom: 1rem; padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--border);
   }
-  .audio-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 14px;
-  }
-  .audio-card {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.1rem 1.25rem;
-    box-shadow: var(--card-shadow);
-    transition: transform 0.2s cubic-bezier(.22,1,.36,1),
-                box-shadow 0.2s, border-color 0.2s;
-  }
-  .audio-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--card-shadow-hover);
-    border-color: var(--accent2);
-  }
-  .audio-card .method-badge {
-    display: inline-block;
-    background: var(--tag-bg); color: var(--tag-fg);
-    border-radius: 100px; padding: 2px 10px;
-    font-size: 11px; font-weight: 600;
-    margin-bottom: 0.6rem; letter-spacing: 0.03em;
-  }
-  .audio-card .method-badge.ours {
-    background: var(--success-bg); color: var(--success);
-  }
-  .audio-card p {
-    font-size: 12px; color: var(--fg2); line-height: 1.5;
-    margin-bottom: 0.7rem; font-style: italic;
-  }
-  .audio-card audio {
-    width: 100%; height: 34px;
-    border-radius: 8px;
-  }
-
-  /* Row-based audio table (wider view) */
   .audio-table-wrap {
-    overflow-x: auto;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     box-shadow: var(--card-shadow);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
   }
   .audio-table {
     width: 100%; border-collapse: collapse;
     font-size: 13px; background: var(--bg2);
-    min-width: 680px;
+    table-layout: fixed;
   }
-  .audio-table thead { background: #f0f4f8; }
+  .audio-table colgroup .col-text { width: 28%; }
+  .audio-table colgroup .col-base { width: 18%; }
+  .audio-table colgroup .col-ours { width: 18%; }
+  .audio-table thead { background: #f5f6f4; }
   .audio-table th {
     padding: 10px 14px; font-weight: 600;
     color: var(--fg2); font-size: 12px;
     border-bottom: 1px solid var(--border2);
+    text-align: center; letter-spacing: 0.02em;
   }
-  .audio-table th:first-child { text-align: left; min-width: 180px; }
+  .audio-table th:first-child { text-align: left; }
+  .audio-table th.th-ours {
+    background: linear-gradient(to right, #eaf7f0, #c8edda);
+    color: #1a6640;
+  }
   .audio-table td {
-    padding: 10px 14px; vertical-align: top;
+    padding: 12px 14px; vertical-align: middle;
     border-bottom: 1px solid var(--border);
+    text-align: center;
   }
-  .audio-table td:first-child { font-size: 12px; color: var(--fg2); line-height: 1.5; font-style: italic; }
+  .audio-table td:first-child {
+    font-size: 13px; color: var(--fg2);
+    line-height: 1.6; text-align: left;
+    font-style: italic;
+  }
   .audio-table tr:last-child td { border-bottom: none; }
-  .audio-table audio { width: 100%; height: 30px; }
-  .col-ours { background: #f0f9f4; }
+  .audio-table td.td-ours-left {
+    background: #eef9f3;
+  }
+  .audio-table td.td-ours-right {
+    background: #eef9f3;
+  }
+  .audio-table tr:hover td.td-ours-left  { background: #e2f6ec; }
+  .audio-table tr:hover td.td-ours-right { background: #e2f6ec; }
+  .audio-table tr:hover td:not(.td-ours-left):not(.td-ours-right) { background: #fafaf8; }
+  .audio-table audio { width: 100%; height: 32px; display: block; }
 
   /* ── Citation ── */
   .citation-box {
@@ -731,36 +714,43 @@
     <h3>LibriTTS — test-clean</h3>
     <div class="audio-table-wrap">
       <table class="audio-table">
+        <colgroup>
+          <col class="col-text">
+          <col class="col-base">
+          <col class="col-base">
+          <col class="col-ours">
+          <col class="col-ours">
+        </colgroup>
         <thead>
           <tr>
             <th>Text</th>
             <th>EAS</th>
             <th>RAS</th>
-            <th class="col-ours">HierEAS ✦</th>
-            <th class="col-ours">HierRAS ✦</th>
+            <th class="th-ours" style="background:linear-gradient(to right,#eaf7f0,#d4f0e0);border-left:2px solid #9ecfb8">HierEAS ✦</th>
+            <th class="th-ours" style="background:linear-gradient(to right,#d4f0e0,#c0e8d0)">HierRAS ✦</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>"It is said that his right arm had grown powerless from having been raised so often…"</td>
+            <td>"It is said that his right arm had grown powerless from having been raised so often over the heads of those whom he baptized. He wished then to go to China to win still more souls for God but he died of fever on the island of Sancian."</td>
             <td><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1089_134686_000032_000007/eas.wav"></audio></td>
             <td><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1089_134686_000032_000007/ras_k50_win25.wav"></audio></td>
-            <td class="col-ours"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1089_134686_000032_000007/rank_eas_hier.wav"></audio></td>
-            <td class="col-ours"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1089_134686_000032_000007/rank_ras_hier.wav"></audio></td>
+            <td class="td-ours-left"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1089_134686_000032_000007/rank_eas_hier.wav"></audio></td>
+            <td class="td-ours-right"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1089_134686_000032_000007/rank_ras_hier.wav"></audio></td>
           </tr>
           <tr>
             <td>"Mr Soames was a tall, spare man, of a nervous and excitable temperament."</td>
             <td><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1580_141083_000002_000002/eas.wav"></audio></td>
             <td><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1580_141083_000002_000002/ras_k50_win25.wav"></audio></td>
-            <td class="col-ours"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1580_141083_000002_000002/rank_eas_hier.wav"></audio></td>
-            <td class="col-ours"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1580_141083_000002_000002/rank_ras_hier.wav"></audio></td>
+            <td class="td-ours-left"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1580_141083_000002_000002/rank_eas_hier.wav"></audio></td>
+            <td class="td-ours-right"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1580_141083_000002_000002/rank_ras_hier.wav"></audio></td>
           </tr>
           <tr>
-            <td>"She had pictured herself earning this by teaching one or two of her specialties in some private school…"</td>
+            <td>"She had pictured herself earning this by teaching one or two of her specialties in some private school near New York or Boston, or even in a Western college."</td>
             <td><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1995_1826_000005_000001/eas.wav"></audio></td>
             <td><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1995_1826_000005_000001/ras_k50_win25.wav"></audio></td>
-            <td class="col-ours"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1995_1826_000005_000001/rank_eas_hier.wav"></audio></td>
-            <td class="col-ours"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1995_1826_000005_000001/rank_ras_hier.wav"></audio></td>
+            <td class="td-ours-left"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1995_1826_000005_000001/rank_eas_hier.wav"></audio></td>
+            <td class="td-ours-right"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Libritts/1995_1826_000005_000001/rank_ras_hier.wav"></audio></td>
           </tr>
         </tbody>
       </table>
@@ -772,13 +762,20 @@
     <h3>LibriSpeech — test-clean</h3>
     <div class="audio-table-wrap">
       <table class="audio-table">
+        <colgroup>
+          <col class="col-text">
+          <col class="col-base">
+          <col class="col-base">
+          <col class="col-ours">
+          <col class="col-ours">
+        </colgroup>
         <thead>
           <tr>
             <th>Text</th>
             <th>EAS</th>
             <th>RAS</th>
-            <th class="col-ours">HierEAS ✦</th>
-            <th class="col-ours">HierRAS ✦</th>
+            <th class="th-ours" style="background:linear-gradient(to right,#eaf7f0,#d4f0e0);border-left:2px solid #9ecfb8">HierEAS ✦</th>
+            <th class="th-ours" style="background:linear-gradient(to right,#d4f0e0,#c0e8d0)">HierRAS ✦</th>
           </tr>
         </thead>
         <tbody>
@@ -786,32 +783,28 @@
             <td>"He began a confused complaint against the wizard, who had vanished behind the curtain on the left."</td>
             <td><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/61-70968-0000/eas.wav"></audio></td>
             <td><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/61-70968-0000/ras_k50_win25.wav"></audio></td>
-            <td class="col-ours"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/61-70968-0000/rank_eas_hier.wav"></audio></td>
-            <td class="col-ours"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/61-70968-0000/rank_ras_hier.wav"></audio></td>
+            <td class="td-ours-left"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/61-70968-0000/rank_eas_hier.wav"></audio></td>
+            <td class="td-ours-right"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/61-70968-0000/rank_ras_hier.wav"></audio></td>
           </tr>
           <tr>
-            <td>"I remained there alone for many hours, but I must acknowledge that before I left the chambers I had gradually brought myself…"</td>
+            <td>"I remained there alone for many hours, but I must acknowledge that before I left the chambers I had gradually brought myself to look at the matter in another light."</td>
             <td><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/8455-210777-0000/eas.wav"></audio></td>
             <td><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/8455-210777-0000/ras_k50_win25.wav"></audio></td>
-            <td class="col-ours"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/8455-210777-0000/rank_eas_hier.wav"></audio></td>
-            <td class="col-ours"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/8455-210777-0000/rank_ras_hier.wav"></audio></td>
+            <td class="td-ours-left"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/8455-210777-0000/rank_eas_hier.wav"></audio></td>
+            <td class="td-ours-right"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/8455-210777-0000/rank_ras_hier.wav"></audio></td>
           </tr>
           <tr>
-            <td>"Then he rushed down the stairs into the courtyard, shouting loudly for his soldiers and threatening to punish everybody…"</td>
+            <td>"Then he rushed down the stairs into the courtyard, shouting loudly for his soldiers and threatening to punish everybody in his dominions if the sailorman was not recaptured."</td>
             <td><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/8555-284447-0000/eas.wav"></audio></td>
             <td><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/8555-284447-0000/ras_k50_win25.wav"></audio></td>
-            <td class="col-ours"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/8555-284447-0000/rank_eas_hier.wav"></audio></td>
-            <td class="col-ours"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/8555-284447-0000/rank_ras_hier.wav"></audio></td>
+            <td class="td-ours-left"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/8555-284447-0000/rank_eas_hier.wav"></audio></td>
+            <td class="td-ours-right"><audio controls src="https://danny-nus.github.io/MSpoofTTS.github.io/MSpoof_sample/Librispeech/8555-284447-0000/rank_ras_hier.wav"></audio></td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <div class="info-note">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-    <span>Audio loads directly from your existing GitHub Pages hosting. Our method (HierRAS) column is highlighted in green. Add more rows or datasets as needed.</span>
-  </div>
 </section>
 
 <hr class="divider">
