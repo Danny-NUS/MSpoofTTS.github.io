@@ -816,15 +816,12 @@
   <p style="font-size:14px; color:var(--fg2); margin-bottom:1.2rem">If you find MSpoofTTS useful in your research, please cite our paper:</p>
   <div class="citation-box">
     <button class="copy-btn" onclick="copyCite(this)">Copy</button>
-    <pre id="cite-text">@misc{zhao2026mspooftts,
+    <pre id="cite-text">@article{zhao2026hierarchical,
   title   = {Hierarchical Decoding for Discrete Speech Synthesis
              with Multi-Resolution Spoof Detection},
-  author  = {Junchuan Zhao and Minh Duc Vu and Ye Wang},
-  year    = {2026},
-  eprint  = {2603.05373},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.SD},
-  url     = {https://arxiv.org/abs/2603.05373},
+  author  = {Zhao, Junchuan and Vu, Minh Duc and Wang, Ye},
+  journal = {arXiv preprint arXiv:2603.05373},
+  year    = {2026}
 }</pre>
   </div>
 </section>
@@ -842,12 +839,12 @@
 <script>
 // ── Subjective data — from paper Figure 3 (15 listeners, 1–5 scale) ──
 const SUBJ = [
-  { sys: 'GT',      mosN: 4.55, mosQ: 4.45, smos: 4.70, ci: 0.09, gt: true,  ours: false },
-  { sys: 'Original',mosN: 3.25, mosQ: 3.85, smos: 4.30, ci: 0.14, gt: false, ours: false },
-  { sys: 'RAS',     mosN: 3.80, mosQ: 4.10, smos: 4.05, ci: 0.11, gt: false, ours: false },
-  { sys: 'EAS',     mosN: 3.90, mosQ: 4.12, smos: 4.30, ci: 0.10, gt: false, ours: false },
-  { sys: 'HierRAS', mosN: 4.10, mosQ: 4.23, smos: 4.30, ci: 0.09, gt: false, ours: true  },
-  { sys: 'HierEAS', mosN: 4.22, mosQ: 4.15, smos: 4.10, ci: 0.09, gt: false, ours: true  },
+  { sys: 'GT',      mosN: 4.58, mosQ: 4.45, smos: 4.75, ci: 0.09, gt: true,  ours: false },
+  { sys: 'Original',mosN: 3.22, mosQ: 3.88, smos: 4.32, ci: 0.14, gt: false, ours: false },
+  { sys: 'RAS',     mosN: 3.62, mosQ: 3.82, smos: 4.05, ci: 0.11, gt: false, ours: false },
+  { sys: 'EAS',     mosN: 3.85, mosQ: 4.10, smos: 4.32, ci: 0.10, gt: false, ours: false },
+  { sys: 'HierRAS', mosN: 4.10, mosQ: 4.25, smos: 4.20, ci: 0.09, gt: false, ours: true  },
+  { sys: 'HierEAS', mosN: 4.25, mosQ: 4.15, smos: 4.08, ci: 0.09, gt: false, ours: true  },
 ];
 
 // Palette matching paper figure style
